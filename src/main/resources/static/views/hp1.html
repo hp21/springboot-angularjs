@@ -1,0 +1,20 @@
+<div class="section">
+    <h3>{{headingTitle}}</h3>
+    <div>
+
+        <select ng-model="selectedName" ng-options="car.name for car in mycars track by car.id"></select>
+
+        <!--    <ul type="square" ng-repeat = "car in mycars">
+                <li>{{car.name}}</li>
+            </ul>-->
+        <br/>
+        <hr/>
+        <pre>model = {{selectedName | json}}</pre>
+        <pre>model = {{selectedName}}</pre>
+        <pre>model = {{selectedName.id}} {{selectedName.name}} {{selectedName.year}}</pre>
+
+
+    <!--    <pre>model = {{selectedName.toString()}} </pre> -->
+        <br/>
+    </div>
+</div>
