@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.javacodegeeks.examples")
+@ComponentScan("com.javacodegeeks.examples.controller")
 public class WebAppInitializer{
 
     public static void main(String[] args) throws Exception{

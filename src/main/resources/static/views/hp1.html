@@ -8,13 +8,45 @@
                 <li>{{car.name}}</li>
             </ul>-->
         <br/>
+        <button ng-click="hideClickHandler()">Hide</button>
         <hr/>
         <pre>model = {{selectedName | json}}</pre>
-        <pre>model = {{selectedName}}</pre>
+        <pre ng-hide="isHidden">model = {{selectedName}}</pre>
         <pre>model = {{selectedName.id}} {{selectedName.name}} {{selectedName.year}}</pre>
 
+        <div ng-class="myclass">myclass</div>
 
-    <!--    <pre>model = {{selectedName.toString()}} </pre> -->
+        <ul>
+            <li ng-repeat="name in names">{{name | filter:search}}</li>
+        </ul>
+
+        <table>
+            <tbody>
+            <tr ng-repeat="car in mycars">
+                <td>{{car.name}}</td>
+                <td>{{car.year}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <!--    <pre>model = {{selectedName.toString()}} </pre> -->
         <br/>
+
+
+        <p>Add Car</p>
+
+        <form>
+            <input type="text" ng-model="newCar.name"/>
+            <br/>
+            <input type="text" ng-model="newCar.year"/>
+            <br/>
+            <button ng-click="addCmd()">Add car</button>
+
+        </form>
+
+
+
+
     </div>
 </div>
