@@ -15,7 +15,7 @@ app.controller('hpController', function($scope) {
 
 });
 
-app.controller('hp1Controller', function($scope) {
+app.controller('hp1Controller', function($scope, $http) {
     $scope.newCar = {id:"101",name:"",year:""}
 
     $scope.headingTitle = "HP";
@@ -40,6 +40,18 @@ app.controller('hp1Controller', function($scope) {
      $scope.resetCmd = function(){
             $scope.newCar = {id: parseInt($scope.newCar.id) + +1,name:"",year:""}
         }
+
+     $scope.restloader = function(){
+        $http.get("http://localhost:8080/rest/cars")
+            .success(function(data){
+                $scope.restcars = data;
+            })
+            .error(function(){
+               window.alert('There was an error!');
+           });
+
+     }
+
 
 
 });

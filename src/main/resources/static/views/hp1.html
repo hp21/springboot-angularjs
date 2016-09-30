@@ -45,6 +45,26 @@
 
         </form>
 
+        <hr/>
+        <br/>
+        <button ng-click="restloader()">Rest loader</button>
+
+        <br/>
+
+        <table>
+            <thead>
+                <tr>Name</tr>
+                <tr>Year</tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="car in restcars">
+                <td>{{car.name}}</td>
+                <td>{{car.year}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+
 
 
 
