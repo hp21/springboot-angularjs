@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.javacodegeeks.examples.registry.Registry;
+
 @RestController
 @RequestMapping("/rest")
 public class CarController {
@@ -14,6 +16,9 @@ public class CarController {
     @RequestMapping(value = "/cars", method = RequestMethod.GET)
     public List<Car> homepage() {
 
+        return Registry.cars();
+
+/*
         List<Car> result = new ArrayList<Car>();
         Car car = new Car();
         car.setId(12L);
@@ -28,5 +33,6 @@ public class CarController {
         result.add(car);
 
         return result;
+*/
     }
 }

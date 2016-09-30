@@ -44,6 +44,7 @@ app.controller('hp1Controller', function($scope, $http) {
      $scope.restloader = function(){
         $http.get("http://localhost:8080/rest/cars")
             .success(function(data){
+                console.log("data: " + data);
                 $scope.restcars = data;
             })
             .error(function(){

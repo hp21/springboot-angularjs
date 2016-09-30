@@ -53,19 +53,17 @@
 
         <table>
             <thead>
-                <tr>Name</tr>
-                <tr>Year</tr>
+            <tr>Name</tr>
+            <tr>Year</tr>
             </thead>
             <tbody>
             <tr ng-repeat="car in restcars">
+                <td>{{car.id}}</td>
                 <td>{{car.name}}</td>
                 <td>{{car.year}}</td>
             </tr>
             </tbody>
         </table>
-
-
-
 
 
     </div>
