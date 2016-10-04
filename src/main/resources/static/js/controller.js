@@ -6,7 +6,8 @@ app.controller('rolesController', function($scope) {
     $scope.headingTitle = "Roles List";
 });
 
-
+app.controller('tabsController', function($scope) {
+});
 
 app.controller('hpController', function($scope) {
     $scope.headingTitle = "HP";
@@ -37,9 +38,11 @@ app.controller('hp1Controller', function($scope, $http) {
         $scope.newCar = {id: parseInt($scope.newCar.id) + parseInt(1),name:"",year:""}
     }
 
+    this.resetText = "Reset text";
+
      $scope.resetCmd = function(){
             $scope.newCar = {id: parseInt($scope.newCar.id) + +1,name:"",year:""}
-        }
+    }
 
      $scope.restloader = function(){
         $http.get("http://localhost:8080/rest/cars")
@@ -56,3 +59,24 @@ app.controller('hp1Controller', function($scope, $http) {
 
 
 });
+
+
+app.controller('form3Controller',  function() {
+   var self = this;
+   self.submit1 = function() {
+     // Create user object to send to the server
+     var user = {username: self.username, password: self.password};
+     console.log('First form submit with ', user);
+   };
+   self.submit2 = function() {
+     console.log('Second form submit with ', self.user);
+   };
+ });
+
+
+app.controller('formvalidationController', function() {
+      var self = this;
+      self.submit = function() {
+        console.log('User clicked submit with ', self.user);
+      };
+ });

@@ -1,0 +1,38 @@
+<div>
+
+    <form ng-submit="ctrl.submit()">
+        <fieldset >
+            <legend>Login data</legend>
+            <input type="text" ng-model="ctrl.user.username">username</input>
+            <br/>
+            <div>you typed: {{ctrl.user.username}}</div>
+            <br/>
+            <input type="password" ng-model="ctrl.user.password">password</input>
+            <br/>
+            <input type="submit" value="Submit"/>
+        </fieldset>
+    </form>
+
+    <script type="text/javascript">
+  angular.module('notesApp', [])
+    .controller('MainCtrl', [function() {
+      var self = this;
+      self.submit = function() {
+        console.log('User clicked submit with ', self.user);
+        alert('User clicked submit with ', self.user);
+      };
+
+      $scope.submit = function() {
+        console.log('User clicked submit with ', self.user);
+        alert('User clicked submit with ', self.user);
+      };
+    }]);
+
+
+
+
+
+
+
+    </script>
+</div>
