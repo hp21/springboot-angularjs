@@ -14,6 +14,21 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/app.css">
+
+
+
+    <style>
+    .username.ng-valid {
+      background-color: green;
+    }
+    .username.ng-dirty.ng-invalid-required {
+      background-color: red;
+    }
+    .username.ng-dirty.ng-invalid-minlength {
+      background-color: lightpink;
+    }
+  </style>
+
 </head>
 <body>
 <h2>Administrator Panel</h2>
@@ -27,6 +42,8 @@
         <li><a href="#/notesapp">notesapp</a></li>
         <li><a href="#/form3">form3</a></li>
         <li><a href="#/formvalidation">Formvalidation</a></li>
+        <li><a href="#/nested">Nested Form</a></li>
+        <li><a href="#/checkbox">Check box</a></li>
     </ul>
 </div>
 <div ng-view></div>

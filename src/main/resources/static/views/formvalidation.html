@@ -1,7 +1,16 @@
 <div>
     <form ng-submit="fctrl.submit()" name="myForm">
-        <input type="text" ng-model="fctrl.user.username" required ng-minlength="4" />
-        <input type="password" ng-model="fctrl.user.password" required />
-        <input type="submit" value="Submit" ng-disabled="myForm.$invalid" />
+        <span ng-show="myForm.uname.$error.required">This is a required field</span><br/>
+        <span ng-show="myForm.uname.$error.minlength">Minimum length required is 4</span><br/>
+        <span ng-show="myForm.uname.$invalid">This field is invalid</span><br/>
+
+        <input  class="username" name="uname" type="text" ng-model="fctrl.user.username" required ng-minlength="4"/>
+        <input type="password" ng-model="fctrl.user.password" required/>
+        <input type="submit" value="Submit" ng-disabled="myForm.$invalid"/>
+        <br/><br/>
+        Pristine {{myForm.$pristine}}<br/>
+        dirty: {{myForm.$dirty}}
+        error: {{myform.$error}}
+
     </form>
 </div>

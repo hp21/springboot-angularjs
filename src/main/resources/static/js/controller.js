@@ -80,3 +80,23 @@ app.controller('formvalidationController', function() {
         console.log('User clicked submit with ', self.user);
       };
  });
+
+
+app.controller('nestedFormController', function() {
+    console.log('nestedFormController');
+      }
+  );
+
+
+app.controller('checkboxController',
+   function() {
+         var self = this;
+          self.sports = [
+            {label: 'Basketball', selected: 'YES'},
+            {label: 'Cricket', selected: 'NO'},
+            {label: 'Soccer', selected: 'NO'},
+            {label: 'Swimming', selected: 'YES'}
+            ]
+        }
+
+  );

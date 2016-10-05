@@ -1,0 +1,17 @@
+<div>
+    <h2>What are your favorite sports?</h2>
+    <div ng-repeat="sport in cctrl.sports">
+        <label ng-bind="sport.label"></label>
+        <div>
+            With Binding:
+            <input type="checkbox" ng-model="sport.selected" ng-true-value="'YES'" ng-false-value="'NO'"/>
+        </div>
+        <div>
+            Using ng-checked:
+            <input type="checkbox" ng-checked="sport.selected === 'YES'"/>
+        </div>
+        <div>
+            Current state: {{sport.selected}}
+        </div>
+    </div>
+</div>

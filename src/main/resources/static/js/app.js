@@ -28,9 +28,17 @@ app.config(function($routeProvider){
         .when('/notesapp',{
             templateUrl: '/views/notesapp.html',
                 })
-         .when('/tabs',{
+        .when('/tabs',{
             templateUrl: '/views/tabs.html',
             controller: 'tabsController'
+        })
+        .when('/nested',{
+            templateUrl: '/views/nestedform.html',
+            controller: 'nestedFormController'
+        })
+        .when('/checkbox',{
+            templateUrl: '/views/checkbox.html',
+            controller: 'checkboxController as cctrl'
                 })
         .otherwise(
             { redirectTo: '/'}
